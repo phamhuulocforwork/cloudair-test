@@ -6,25 +6,9 @@ export const PreviewPage = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Load data from localStorage or API
     const savedData = localStorage.getItem("puck-data");
     if (savedData) {
-      try {
-        setData(JSON.parse(savedData));
-      } catch (error) {
-        console.error("Failed to parse saved data:", error);
-        // Set default data if parsing fails
-        setData({
-          content: [],
-          root: { props: { title: "Preview Page" } },
-        });
-      }
-    } else {
-      // Set default data if no saved data
-      setData({
-        content: [],
-        root: { props: { title: "Preview Page" } },
-      });
+      setData(JSON.parse(savedData));
     }
   }, []);
 
@@ -54,7 +38,7 @@ export const PreviewPage = () => {
           alignItems: "center",
         }}
       >
-        <h1 style={{ margin: 0, fontSize: "24px", color: "#333" }}>📋 Preview Mode</h1>
+        <h1 style={{ margin: 0, fontSize: "24px", color: "#333" }}>Preview</h1>
         <button
           onClick={() => (window.location.href = "/")}
           style={{

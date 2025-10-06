@@ -6,7 +6,7 @@ export const config: Config = {
   components: {
     DropdownBlock: {
       fields: {
-        label: { type: "text" },
+        label: { type: "text", contentEditable: true },
         options: {
           type: "array",
           arrayFields: {
@@ -24,7 +24,7 @@ export const config: Config = {
     },
     RadioBlock: {
       fields: {
-        label: { type: "text" },
+        label: { type: "text", contentEditable: true },
         options: {
           type: "array",
           arrayFields: {

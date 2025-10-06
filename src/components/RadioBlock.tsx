@@ -23,7 +23,6 @@ export interface RadioBlockProps {
   };
 }
 
-// Inline editable text component for label (reused from DropdownBlock)
 const InlineEditableLabel: React.FC<{
   value: string;
   onChange: (value: string) => void;
@@ -76,7 +75,6 @@ const InlineEditableLabel: React.FC<{
   );
 };
 
-// Inline option editor for edit mode
 const InlineOptionEditor: React.FC<{
   blockId: string;
   options: { option: string }[];
@@ -258,7 +256,6 @@ export const RadioBlock: React.FC<RadioBlockProps> = ({
   const isEditing = puck?.isEditing ?? false;
   const getPuck = useSafePuck();
 
-  // Create a unique field name based on label or id
   const fieldName = id || label.toLowerCase().replace(/\s+/g, "_");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

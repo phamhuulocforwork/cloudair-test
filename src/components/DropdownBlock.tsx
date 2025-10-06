@@ -73,7 +73,6 @@ const InlineEditableLabel: React.FC<{
   );
 };
 
-// Inline option editor for edit mode
 const InlineOptionEditor: React.FC<{
   blockId: string;
   options: { option: string }[];
@@ -263,7 +262,6 @@ export const DropdownBlock: React.FC<DropdownBlockProps> = ({
   const isEditing = puck?.isEditing ?? false;
   const getPuck = useSafePuck();
 
-  // Create a unique field name based on label or id
   const fieldName = id || label.toLowerCase().replace(/\s+/g, "_");
 
   const handleChange = (event: SelectChangeEvent<string>) => {
