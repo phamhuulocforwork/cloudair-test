@@ -1,0 +1,62 @@
+/* Puck CSS - Import đầu tiên */
+@import "@measured/puck/puck.css";
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Puck overlay portal styling */
+[data-puck-overlay-portal] {
+  outline: none !important;
+  outline-offset: 0 !important;
+}
+
+/* Custom styles for DropdownBlock */
+.dropdown-block-editing {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.dropdown-option-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dropdown-option-text {
+  flex: 1;
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: text;
+  background-color: white;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-option-text:hover {
+  border-color: #999;
+}
+
+.dropdown-option-text:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
+}
